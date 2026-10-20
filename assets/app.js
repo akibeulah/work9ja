@@ -18,17 +18,25 @@
   onScroll();
   window.addEventListener('scroll', onScroll, { passive: true });
 
-  // mobile menu
+  // mobile menu — side-sliding drawer with overlay
   var toggle = document.querySelector('.nav-toggle');
   var links = document.querySelector('.nav-links');
   if (toggle && links) {
-    toggle.addEventListener('click', function(){
-      var open = links.classList.toggle('open');
+    var overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+    function setMenu(open){
+      links.classList.toggle('open', open);
+      overlay.classList.toggle('open', open);
+      if (nav) nav.classList.toggle('menu-open', open);
       toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-    links.querySelectorAll('a').forEach(function(a){
-      a.addEventListener('click', function(){ links.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
-    });
+      document.body.style.overflow = open ? 'hidden' : '';
+    }
+    toggle.addEventListener('click', function(){ setMenu(!links.classList.contains('open')); });
+    overlay.addEventListener('click', function(){ setMenu(false); });
+    links.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') setMenu(false); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 900) setMenu(false); });
   }
 
   // smooth scroll (Lenis if present) + anchor handling

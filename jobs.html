@@ -4,14 +4,14 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Find jobs in Nigeria — Work9ja Jobs</title>
+<title>Find jobs in Nigeria - Work9ja Jobs</title>
 <meta name="description" content="Browse and apply for jobs across Nigeria on Work9ja. Filter by role, location, salary and work type, and see how well each role matches your verified skills." />
 <meta name="robots" content="index, follow, max-image-preview:large" />
 <link rel="canonical" href="https://work9ja.sprtn.net/jobs.html" />
 <meta name="theme-color" content="#0E1211" />
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="Work9ja" />
-<meta property="og:title" content="Find jobs in Nigeria — Work9ja Jobs" />
+<meta property="og:title" content="Find jobs in Nigeria - Work9ja Jobs" />
 <meta property="og:description" content="Browse jobs across Nigeria, matched to your verified skills. One profile, one application." />
 <meta property="og:url" content="https://work9ja.sprtn.net/jobs.html" />
 <meta property="og:image" content="https://work9ja.sprtn.net/og-image.jpg" />
@@ -32,49 +32,73 @@
 
 <style>
 .page-hero{padding-top:128px;padding-bottom:0;position:relative;overflow:hidden}
-.page-hero .glow{position:absolute;z-index:0;width:60vw;height:60vw;max-width:720px;right:-14vw;top:-18vw;background:radial-gradient(circle,rgba(198,242,78,.14),transparent 62%);pointer-events:none}
+.page-hero .glow{position:absolute;z-index:0;width:60vw;height:60vw;max-width:720px;right:-14vw;top:-18vw;background:radial-gradient(circle,rgba(198,242,78,.12),transparent 62%);pointer-events:none}
 .page-hero h1{font-size:var(--step-3);max-width:16ch;position:relative;z-index:2}
-.page-hero p{color:var(--text-2);max-width:48ch;margin-top:20px;position:relative;z-index:2}
+.page-hero p{color:var(--text-2);max-width:48ch;margin-top:18px;position:relative;z-index:2}
 
-/* search bar */
-.searchbar{display:flex;gap:10px;background:var(--ink-3);border:1px solid var(--border-strong);border-radius:100px;padding:8px 8px 8px 20px;margin-top:36px;position:relative;z-index:2;max-width:760px;flex-wrap:wrap}
-.searchbar .fld{display:flex;align-items:center;gap:10px;flex:1;min-width:150px}
-.searchbar .fld svg{width:18px;height:18px;stroke:var(--text-3);stroke-width:1.8;fill:none;flex:none}
-.searchbar input{background:none;border:0;color:var(--bone);font-family:inherit;font-size:var(--step-0);width:100%;outline:none}
+/* clean search bar: one input + circular button */
+.searchbar{display:flex;align-items:center;gap:12px;background:var(--ink-3);border:1px solid var(--border-strong);border-radius:100px;padding:7px 7px 7px 22px;margin-top:34px;max-width:560px;position:relative;z-index:2;transition:border-color .35s,box-shadow .35s}
+.searchbar:focus-within{border-color:var(--accent-ink);box-shadow:var(--shadow)}
+.searchbar .s-ic{width:20px;height:20px;stroke:var(--text-3);stroke-width:1.8;fill:none;flex:none}
+.searchbar input{flex:1;min-width:0;background:none;border:0;color:var(--bone);font-family:inherit;font-size:var(--step-0);padding:12px 0;outline:none}
 .searchbar input::placeholder{color:var(--text-3)}
-.searchbar .sep{width:1px;background:var(--border);align-self:stretch;margin:4px 0}
-@media(max-width:620px){.searchbar{border-radius:20px}.searchbar .sep{display:none}.searchbar .btn{width:100%;justify-content:center}}
+.search-btn{width:46px;height:46px;border-radius:50%;background:var(--lime);color:var(--on-accent);border:0;cursor:pointer;display:grid;place-items:center;flex:none;transition:background .3s,transform .4s var(--expo-out)}
+.search-btn:hover{background:var(--lime-deep);transform:scale(1.06)}
+.search-btn svg{width:20px;height:20px;stroke:currentColor;stroke-width:2.2;fill:none}
 
-/* layout */
-.board{display:grid;grid-template-columns:260px 1fr;gap:clamp(24px,3vw,44px);align-items:start;padding-top:clamp(40px,6vh,70px)}
-@media(max-width:900px){.board{grid-template-columns:1fr}}
-.filters{position:sticky;top:94px;border:1px solid var(--border);border-radius:var(--r-md);padding:24px;background:var(--ink-2)}
-@media(max-width:900px){.filters{position:static}}
-.fgroup{padding:16px 0;border-top:1px solid var(--border)}
-.fgroup:first-child{border-top:0;padding-top:0}
-.fgroup h4{font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);letter-spacing:.06em;text-transform:uppercase;color:var(--text-3);margin:0 0 14px;font-weight:500}
-.check{display:flex;align-items:center;gap:10px;color:var(--text-2);font-size:var(--step--1);padding:6px 0;cursor:pointer;transition:color .3s}
-.check:hover{color:var(--text-1)}
-.check input{appearance:none;width:17px;height:17px;border:1.5px solid var(--border-strong);border-radius:5px;cursor:pointer;position:relative;flex:none;transition:background .3s,border-color .3s}
-.check input:checked{background:var(--lime);border-color:var(--lime)}
-.check input:checked::after{content:"";position:absolute;left:5px;top:1.5px;width:4px;height:9px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+/* toolbar */
+.jobs-toolbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:26px;flex-wrap:wrap}
+.jobs-toolbar .count{color:var(--text-2);font-size:var(--step--1)}
+.jobs-toolbar .count b{color:var(--text-1);font-family:"Space Grotesk",sans-serif}
+.tb-actions{display:flex;gap:10px;align-items:center}
+.filter-btn{display:inline-flex;align-items:center;gap:9px;font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);background:var(--ink-3);border:1px solid var(--border-strong);color:var(--text-1);border-radius:100px;padding:.68em 1.15em;cursor:pointer;transition:border-color .3s}
+.filter-btn:hover{border-color:var(--accent-ink)}
+.filter-btn svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.8;fill:none}
+.filter-btn .badge{background:var(--lime);color:var(--on-accent);font-size:.7rem;border-radius:100px;padding:.1em .5em;font-weight:600;font-family:"Space Grotesk",sans-serif}
+.sortsel{background:var(--ink-3);border:1px solid var(--border-strong);color:var(--text-2);border-radius:100px;padding:.68em 1em;font-family:inherit;font-size:var(--step--1);cursor:pointer}
 
-.results-top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;flex-wrap:wrap}
-.results-top .count{color:var(--text-2);font-size:var(--step--1)}
-.results-top .count b{color:var(--text-1);font-family:"Space Grotesk",sans-serif}
-.sortsel{background:var(--ink-3);border:1px solid var(--border);color:var(--text-2);border-radius:100px;padding:.6em 1em;font-family:inherit;font-size:var(--step--1);cursor:pointer}
-.joblist{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-@media(max-width:1180px){.joblist{grid-template-columns:1fr}}
+/* results */
+.joblist{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
 .jobcard .jc-desc{color:var(--text-2);font-size:var(--step--1);margin-top:12px;line-height:1.5}
 
-.pager{display:flex;gap:8px;justify-content:center;margin-top:40px}
-.pager a{width:42px;height:42px;display:grid;place-items:center;border-radius:11px;border:1px solid var(--border);color:var(--text-2);font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);transition:all .3s}
+.pager{display:flex;gap:8px;justify-content:center;margin-top:44px}
+.pager a{min-width:42px;height:42px;padding:0 6px;display:grid;place-items:center;border-radius:11px;border:1px solid var(--border);color:var(--text-2);font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);transition:all .3s}
 .pager a:hover{border-color:var(--border-strong);color:var(--text-1)}
-.pager a.on{background:var(--lime);color:var(--ink);border-color:var(--lime)}
+.pager a.on{background:var(--lime);color:var(--on-accent);border-color:var(--lime)}
 
-.cta-strip{margin-top:clamp(50px,8vh,90px);background:var(--ink-3);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(30px,5vw,56px);text-align:center}
+.cta-strip{margin-top:clamp(50px,8vh,90px);background:var(--ink-2);border:1px solid var(--border);border-radius:var(--r-lg);padding:clamp(30px,5vw,56px);text-align:center}
 .cta-strip h2{font-size:var(--step-2)}
 .cta-strip p{color:var(--text-2);max-width:44ch;margin:16px auto 0}
+.illus{color:var(--text-3);font-size:var(--step--2);margin-top:22px}
+
+/* filters modal */
+.modal{position:fixed;inset:0;z-index:90;display:none}
+.modal.open{display:block}
+.modal-overlay{position:absolute;inset:0;background:rgba(10,12,8,.5);backdrop-filter:blur(2px)}
+.modal-panel{position:absolute;top:50%;left:50%;transform:translate(-50%,-48%);opacity:0;width:min(540px,92vw);max-height:86vh;overflow-y:auto;background:var(--ink-3);border:1px solid var(--border);border-radius:var(--r-lg);box-shadow:var(--shadow);padding:clamp(22px,4vw,34px);transition:transform .45s var(--expo-out),opacity .4s}
+.modal.open .modal-panel{transform:translate(-50%,-50%);opacity:1}
+.modal-head{display:flex;justify-content:space-between;align-items:center}
+.modal-head h2{font-size:var(--step-1)}
+.modal-x{background:none;border:0;cursor:pointer;color:var(--text-2);width:38px;height:38px;display:grid;place-items:center;border-radius:50%;transition:background .3s}
+.modal-x:hover{background:var(--ink-2)}
+.modal-x svg{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none}
+.modal-body{margin:16px 0 22px}
+.fgroup{padding:18px 0;border-top:1px solid var(--border)}
+.fgroup:first-child{border-top:0;padding-top:4px}
+.fgroup h4{font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);letter-spacing:.05em;text-transform:uppercase;color:var(--text-3);margin:0 0 12px;font-weight:500}
+.fopts{display:flex;flex-wrap:wrap;gap:9px}
+.check{display:inline-flex;align-items:center;gap:9px;color:var(--text-2);font-size:var(--step--1);border:1px solid var(--border);border-radius:100px;padding:.5em .95em;cursor:pointer;transition:border-color .3s,color .3s}
+.check:hover{border-color:var(--border-strong);color:var(--text-1)}
+.check input{appearance:none;width:16px;height:16px;border:1.5px solid var(--border-strong);border-radius:5px;cursor:pointer;position:relative;flex:none;transition:background .3s,border-color .3s}
+.check input:checked{background:var(--lime);border-color:var(--lime)}
+.check input:checked::after{content:"";position:absolute;left:4.5px;top:1px;width:4px;height:9px;border:solid var(--on-accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.modal-foot{display:flex;gap:12px;justify-content:space-between;align-items:center;border-top:1px solid var(--border);padding-top:18px}
+.linkbtn{background:none;border:0;color:var(--text-2);font-family:inherit;font-size:var(--step--1);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.linkbtn:hover{color:var(--text-1)}
+@media(max-width:560px){
+  .modal-panel{top:auto;bottom:0;left:0;transform:translateY(100%);width:100%;max-height:90vh;border-radius:var(--r-lg) var(--r-lg) 0 0}
+  .modal.open .modal-panel{transform:none}
+}
 </style>
 </head>
 
@@ -82,18 +106,17 @@
 
 <header class="nav" id="nav">
   <div class="wrap nav-row">
-    <a href="/" class="wordmark" aria-label="Work9ja home"><span>work</span><span class="nine">9ja</span></a>
+    <a href="/" class="brand" aria-label="Work9ja home"><img src="/apple-icon.png" alt="Work9ja" class="brand-img" /></a>
     <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
       <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
     </button>
     <nav class="nav-links" id="navlinks" aria-label="Primary">
       <a href="/jobs.html" class="current">Jobs</a>
       <a href="/#academy">Academy</a>
-      <a href="/#ecosystem">Network</a>
       <a href="/services.html">Services</a>
       <a href="/#engine">AI Coach</a>
       <a href="/#employers">For employers</a>
-      <a href="/#start" class="btn btn-primary" data-magnetic>Get started
+      <a href="/login.html" class="btn btn-primary" data-magnetic>Get started
         <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </a>
     </nav>
@@ -106,188 +129,220 @@
   <div class="wrap">
     <span class="eyebrow">Work9ja Jobs</span>
     <h1 style="margin-top:16px">Find a role that fits your skills.</h1>
-    <p>Every job shows how closely it matches your verified Work9ja profile — so you apply where you'll actually stand out.</p>
+    <p>Every job shows how closely it matches your verified Work9ja profile, so you apply where you'll actually stand out.</p>
     <form class="searchbar" role="search" onsubmit="return false">
-      <label class="fld"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
-        <input type="text" placeholder="Job title, skill or company" aria-label="Job title, skill or company" />
-      </label>
-      <span class="sep" aria-hidden="true"></span>
-      <label class="fld"><svg viewBox="0 0 24 24"><path d="M12 21s-7-5.2-7-11a7 7 0 0 1 14 0c0 5.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
-        <input type="text" placeholder="Location (e.g. Lagos, Remote)" aria-label="Location" />
-      </label>
-      <button class="btn btn-primary" data-magnetic type="submit">Search
-        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      <svg class="s-ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+      <input type="text" placeholder="Job title, skill or company" aria-label="Job title, skill or company" />
+      <button class="search-btn" type="submit" aria-label="Search">
+        <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
       </button>
     </form>
   </div>
 </section>
 
-<section aria-label="Job results" style="padding-top:0">
-  <div class="wrap board">
-    <!-- filters -->
-    <aside class="filters" aria-label="Filters">
-      <div class="fgroup">
-        <h4>Work type</h4>
-        <label class="check"><input type="checkbox" checked> Full-time</label>
-        <label class="check"><input type="checkbox"> Contract</label>
-        <label class="check"><input type="checkbox"> Internship</label>
-        <label class="check"><input type="checkbox"> Freelance</label>
-      </div>
-      <div class="fgroup">
-        <h4>Location</h4>
-        <label class="check"><input type="checkbox" checked> Remote</label>
-        <label class="check"><input type="checkbox"> Lagos</label>
-        <label class="check"><input type="checkbox"> Abuja</label>
-        <label class="check"><input type="checkbox"> Port Harcourt</label>
-      </div>
-      <div class="fgroup">
-        <h4>Experience</h4>
-        <label class="check"><input type="checkbox"> Entry level</label>
-        <label class="check"><input type="checkbox" checked> Mid-level</label>
-        <label class="check"><input type="checkbox"> Senior</label>
-      </div>
-      <div class="fgroup">
-        <h4>Salary (monthly)</h4>
-        <label class="check"><input type="checkbox"> ₦100k – ₦250k</label>
-        <label class="check"><input type="checkbox" checked> ₦250k – ₦500k</label>
-        <label class="check"><input type="checkbox"> ₦500k+</label>
-      </div>
-    </aside>
-
-    <!-- results -->
-    <div>
-      <div class="results-top">
-        <span class="count"><b>18,240</b> jobs · showing 1–8</span>
+<section aria-label="Job results" style="padding-top:clamp(40px,6vh,70px)">
+  <div class="wrap">
+    <div class="jobs-toolbar">
+      <span class="count"><b>18,240</b> jobs</span>
+      <div class="tb-actions">
+        <button class="filter-btn" id="openFilters" aria-haspopup="dialog">
+          <svg viewBox="0 0 24 24"><path d="M3 6h18M7 12h10M10 18h4"/></svg>
+          Filters <span class="badge">2</span>
+        </button>
         <select class="sortsel" aria-label="Sort by">
           <option>Best match</option><option>Newest</option><option>Highest salary</option>
         </select>
       </div>
-
-      <div class="joblist">
-        <!-- 8 dummy jobs -->
-        <a href="#" class="jobcard reveal">
-          <div class="jc-top"><span class="jc-logo" style="background:#8FD6B4">FW</span>
-            <span class="ring" data-bars style="--p:96;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">96%</span></span>
-          </div>
-          <h3>Product Designer</h3><div class="co">Flutterwave · Lagos (Hybrid)</div>
-          <p class="jc-desc">Own end-to-end design for merchant products, from research to polished UI.</p>
-          <div class="meta"><span class="pill">Full-time</span><span class="pill">Figma</span><span class="pill">Senior</span></div>
-          <div class="sal"><span class="amt">₦600k – ₦900k</span><span class="time">2 days ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal" data-d="1">
-          <div class="jc-top"><span class="jc-logo" style="background:#F2B705">KD</span>
-            <span class="ring" data-bars style="--p:89;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">89%</span></span>
-          </div>
-          <h3>Customer Success Lead</h3><div class="co">Kuda · Remote (Nigeria)</div>
-          <p class="jc-desc">Lead a team keeping SME customers happy, retained and growing on the platform.</p>
-          <div class="meta"><span class="pill">Remote</span><span class="pill">CRM</span><span class="pill">Mid-level</span></div>
-          <div class="sal"><span class="amt">₦400k – ₦550k</span><span class="time">Today</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal">
-          <div class="jc-top"><span class="jc-logo" style="background:#FF6A3D">MN</span>
-            <span class="ring" data-bars style="--p:82;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">82%</span></span>
-          </div>
-          <h3>Data Analyst</h3><div class="co">MTN Nigeria · Abuja</div>
-          <p class="jc-desc">Turn network and customer data into dashboards that guide commercial decisions.</p>
-          <div class="meta"><span class="pill">Full-time</span><span class="pill">SQL</span><span class="pill">Power BI</span></div>
-          <div class="sal"><span class="amt">₦350k – ₦500k</span><span class="time">1 day ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal" data-d="1">
-          <div class="jc-top"><span class="jc-logo" style="background:#8FA7F2">PS</span>
-            <span class="ring" data-bars style="--p:91;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">91%</span></span>
-          </div>
-          <h3>Frontend Engineer</h3><div class="co">Paystack · Remote</div>
-          <p class="jc-desc">Build fast, accessible payment interfaces in React used by thousands of businesses.</p>
-          <div class="meta"><span class="pill">Remote</span><span class="pill">React</span><span class="pill">TypeScript</span></div>
-          <div class="sal"><span class="amt">₦450k – ₦700k</span><span class="time">3 days ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal">
-          <div class="jc-top"><span class="jc-logo" style="background:#C6A0F2">AN</span>
-            <span class="ring" data-bars style="--p:78;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">78%</span></span>
-          </div>
-          <h3>Digital Marketing Manager</h3><div class="co">Andela · Lagos (Hybrid)</div>
-          <p class="jc-desc">Run performance campaigns across paid, email and social to grow qualified signups.</p>
-          <div class="meta"><span class="pill">Full-time</span><span class="pill">Paid Ads</span><span class="pill">SEO</span></div>
-          <div class="sal"><span class="amt">₦400k – ₦600k</span><span class="time">4 days ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal" data-d="1">
-          <div class="jc-top"><span class="jc-logo" style="background:#8FD6B4">WE</span>
-            <span class="ring" data-bars style="--p:85;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">85%</span></span>
-          </div>
-          <h3>Backend Engineer (Node.js)</h3><div class="co">Wema Bank · Lagos</div>
-          <p class="jc-desc">Design secure APIs and services powering digital banking at scale.</p>
-          <div class="meta"><span class="pill">Full-time</span><span class="pill">Node.js</span><span class="pill">PostgreSQL</span></div>
-          <div class="sal"><span class="amt">₦500k – ₦800k</span><span class="time">5 days ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal">
-          <div class="jc-top"><span class="jc-logo" style="background:#F2B705">JU</span>
-            <span class="ring" data-bars style="--p:73;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">73%</span></span>
-          </div>
-          <h3>HR / People Operations Officer</h3><div class="co">Jumia · Remote (Nigeria)</div>
-          <p class="jc-desc">Own onboarding, records and employee experience across distributed teams.</p>
-          <div class="meta"><span class="pill">Remote</span><span class="pill">HRIS</span><span class="pill">Entry–Mid</span></div>
-          <div class="sal"><span class="amt">₦250k – ₦380k</span><span class="time">6 days ago</span></div>
-        </a>
-
-        <a href="#" class="jobcard reveal" data-d="1">
-          <div class="jc-top"><span class="jc-logo" style="background:#FF6A3D">IN</span>
-            <span class="ring" data-bars style="--p:88;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">88%</span></span>
-          </div>
-          <h3>DevOps Engineer</h3><div class="co">Interswitch · Lagos (Hybrid)</div>
-          <p class="jc-desc">Automate CI/CD and cloud infrastructure for high-availability payment systems.</p>
-          <div class="meta"><span class="pill">Full-time</span><span class="pill">AWS</span><span class="pill">Kubernetes</span></div>
-          <div class="sal"><span class="amt">₦650k – ₦950k</span><span class="time">1 week ago</span></div>
-        </a>
-      </div>
-
-      <nav class="pager" aria-label="Pagination">
-        <a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">…</a><a href="#">42</a>
-        <a href="#" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></a>
-      </nav>
-
-      <div class="cta-strip reveal">
-        <h2>Don't just apply — match.</h2>
-        <p>Create a free profile, add your skills, and every job on Work9ja shows how well you fit before you apply.</p>
-        <a href="/#start" class="btn btn-primary" data-magnetic style="margin-top:26px">Create your free profile
-          <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-        </a>
-      </div>
-      <p class="illus" style="color:var(--text-3);font-size:var(--step--2);margin-top:22px">Demonstration listings — sample data for preview only. Company names shown for realism; not live vacancies.</p>
     </div>
+
+    <div class="joblist">
+      <a href="#" class="jobcard reveal">
+        <div class="jc-top"><span class="jc-logo" style="background:#8FD6B4">FW</span>
+          <span class="ring" data-bars style="--p:96;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">96%</span></span>
+        </div>
+        <h3>Product Designer</h3><div class="co">Flutterwave · Lagos (Hybrid)</div>
+        <p class="jc-desc">Own end-to-end design for merchant products, from research to polished UI.</p>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">Figma</span><span class="pill">Senior</span></div>
+        <div class="sal"><span class="amt">₦600k – ₦900k</span><span class="time">2 days ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal" data-d="1">
+        <div class="jc-top"><span class="jc-logo" style="background:#F2B705">KD</span>
+          <span class="ring" data-bars style="--p:89;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">89%</span></span>
+        </div>
+        <h3>Customer Success Lead</h3><div class="co">Kuda · Remote (Nigeria)</div>
+        <p class="jc-desc">Lead a team keeping SME customers happy, retained and growing on the platform.</p>
+        <div class="meta"><span class="pill">Remote</span><span class="pill">CRM</span><span class="pill">Mid-level</span></div>
+        <div class="sal"><span class="amt">₦400k – ₦550k</span><span class="time">Today</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal">
+        <div class="jc-top"><span class="jc-logo" style="background:#FF6A3D">MN</span>
+          <span class="ring" data-bars style="--p:82;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">82%</span></span>
+        </div>
+        <h3>Data Analyst</h3><div class="co">MTN Nigeria · Abuja</div>
+        <p class="jc-desc">Turn network and customer data into dashboards that guide commercial decisions.</p>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">SQL</span><span class="pill">Power BI</span></div>
+        <div class="sal"><span class="amt">₦350k – ₦500k</span><span class="time">1 day ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal" data-d="1">
+        <div class="jc-top"><span class="jc-logo" style="background:#8FA7F2">PS</span>
+          <span class="ring" data-bars style="--p:91;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">91%</span></span>
+        </div>
+        <h3>Frontend Engineer</h3><div class="co">Paystack · Remote</div>
+        <p class="jc-desc">Build fast, accessible payment interfaces in React used by thousands of businesses.</p>
+        <div class="meta"><span class="pill">Remote</span><span class="pill">React</span><span class="pill">TypeScript</span></div>
+        <div class="sal"><span class="amt">₦450k – ₦700k</span><span class="time">3 days ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal">
+        <div class="jc-top"><span class="jc-logo" style="background:#C6A0F2">AN</span>
+          <span class="ring" data-bars style="--p:78;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">78%</span></span>
+        </div>
+        <h3>Digital Marketing Manager</h3><div class="co">Andela · Lagos (Hybrid)</div>
+        <p class="jc-desc">Run performance campaigns across paid, email and social to grow qualified signups.</p>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">Paid Ads</span><span class="pill">SEO</span></div>
+        <div class="sal"><span class="amt">₦400k – ₦600k</span><span class="time">4 days ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal" data-d="1">
+        <div class="jc-top"><span class="jc-logo" style="background:#8FD6B4">WE</span>
+          <span class="ring" data-bars style="--p:85;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">85%</span></span>
+        </div>
+        <h3>Backend Engineer (Node.js)</h3><div class="co">Wema Bank · Lagos</div>
+        <p class="jc-desc">Design secure APIs and services powering digital banking at scale.</p>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">Node.js</span><span class="pill">PostgreSQL</span></div>
+        <div class="sal"><span class="amt">₦500k – ₦800k</span><span class="time">5 days ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal">
+        <div class="jc-top"><span class="jc-logo" style="background:#F2B705">JU</span>
+          <span class="ring" data-bars style="--p:73;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">73%</span></span>
+        </div>
+        <h3>People Operations Officer</h3><div class="co">Jumia · Remote (Nigeria)</div>
+        <p class="jc-desc">Own onboarding, records and employee experience across distributed teams.</p>
+        <div class="meta"><span class="pill">Remote</span><span class="pill">HRIS</span><span class="pill">Entry-Mid</span></div>
+        <div class="sal"><span class="amt">₦250k – ₦380k</span><span class="time">6 days ago</span></div>
+      </a>
+
+      <a href="#" class="jobcard reveal" data-d="1">
+        <div class="jc-top"><span class="jc-logo" style="background:#FF6A3D">IN</span>
+          <span class="ring" data-bars style="--p:88;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">88%</span></span>
+        </div>
+        <h3>DevOps Engineer</h3><div class="co">Interswitch · Lagos (Hybrid)</div>
+        <p class="jc-desc">Automate CI/CD and cloud infrastructure for high-availability payment systems.</p>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">AWS</span><span class="pill">Kubernetes</span></div>
+        <div class="sal"><span class="amt">₦650k – ₦950k</span><span class="time">1 week ago</span></div>
+      </a>
+    </div>
+
+    <nav class="pager" aria-label="Pagination">
+      <a href="#" class="on">1</a><a href="#">2</a><a href="#">3</a><a href="#">…</a><a href="#">42</a>
+      <a href="#" aria-label="Next"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg></a>
+    </nav>
+
+    <div class="cta-strip reveal">
+      <h2>Don't just apply - match.</h2>
+      <p>Create a free profile, add your skills, and every job on Work9ja shows how well you fit before you apply.</p>
+      <a href="/login.html" class="btn btn-primary" data-magnetic style="margin-top:26px">Create your free profile
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+    <p class="illus">Demonstration listings - sample data for preview only. Company names shown for realism; not live vacancies.</p>
   </div>
 </section>
 </main>
+
+<!-- Filters popup -->
+<div class="modal" id="filtersModal" aria-hidden="true">
+  <div class="modal-overlay" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Filter jobs">
+    <div class="modal-head">
+      <h2>Filters</h2>
+      <button class="modal-x" data-close aria-label="Close filters"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <div class="fgroup">
+        <h4>Work type</h4>
+        <div class="fopts">
+          <label class="check"><input type="checkbox" checked> Full-time</label>
+          <label class="check"><input type="checkbox"> Contract</label>
+          <label class="check"><input type="checkbox"> Internship</label>
+          <label class="check"><input type="checkbox"> Freelance</label>
+        </div>
+      </div>
+      <div class="fgroup">
+        <h4>Location</h4>
+        <div class="fopts">
+          <label class="check"><input type="checkbox" checked> Remote</label>
+          <label class="check"><input type="checkbox"> Lagos</label>
+          <label class="check"><input type="checkbox"> Abuja</label>
+          <label class="check"><input type="checkbox"> Port Harcourt</label>
+          <label class="check"><input type="checkbox"> Ibadan</label>
+          <label class="check"><input type="checkbox"> Kano</label>
+        </div>
+      </div>
+      <div class="fgroup">
+        <h4>Experience</h4>
+        <div class="fopts">
+          <label class="check"><input type="checkbox"> Entry level</label>
+          <label class="check"><input type="checkbox" checked> Mid-level</label>
+          <label class="check"><input type="checkbox"> Senior</label>
+        </div>
+      </div>
+      <div class="fgroup">
+        <h4>Salary (monthly)</h4>
+        <div class="fopts">
+          <label class="check"><input type="checkbox"> ₦100k - ₦250k</label>
+          <label class="check"><input type="checkbox"> ₦250k - ₦500k</label>
+          <label class="check"><input type="checkbox"> ₦500k+</label>
+        </div>
+      </div>
+    </div>
+    <div class="modal-foot">
+      <button class="linkbtn" id="clearFilters">Clear all</button>
+      <button class="btn btn-primary" data-close data-magnetic>Show results</button>
+    </div>
+  </div>
+</div>
 
 <footer aria-label="Footer">
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a href="/" class="wordmark"><span>work</span><span class="nine">9ja</span></a>
-        <p class="foot-blurb">Nigeria's career command centre — learn, connect, work and grow from one account.</p>
+        <a href="/" class="brand"><img src="/apple-icon.png" alt="Work9ja" class="brand-img" /></a>
+        <p class="foot-blurb">Nigeria's career command centre - learn, connect, work and grow from one account.</p>
       </div>
       <div><h4>Platform</h4><ul>
-        <li><a href="/jobs.html">Jobs</a></li><li><a href="/#academy">Academy</a></li><li><a href="/#ecosystem">Network</a></li><li><a href="/services.html">Services</a></li><li><a href="/#engine">AI Coach</a></li>
+        <li><a href="/jobs.html">Jobs</a></li><li><a href="/#academy">Academy</a></li><li><a href="/services.html">Services</a></li><li><a href="/#engine">AI Coach</a></li>
       </ul></div>
       <div><h4>For employers</h4><ul>
-        <li><a href="/#employers">Work9ja Talent</a></li><li><a href="/#employers">Post a job</a></li><li><a href="/#engine">AI assistant</a></li><li><a href="/#start">Pricing</a></li>
+        <li><a href="/#employers">Work9ja Talent</a></li><li><a href="/#employers">Post a job</a></li><li><a href="/#engine">AI assistant</a></li><li><a href="/login.html">Pricing</a></li>
       </ul></div>
       <div><h4>Company</h4><ul>
-        <li><a href="https://www.work9ja.com/">About</a></li><li><a href="/#start">Contact</a></li><li><a href="/#start">Privacy</a></li><li><a href="/#start">Terms</a></li>
+        <li><a href="https://www.work9ja.com/">About</a></li><li><a href="/login.html">Contact</a></li><li><a href="/login.html">Privacy</a></li><li><a href="/login.html">Terms</a></li>
       </ul></div>
     </div>
     <div class="foot-bottom">
       <span>© <span id="yr">2026</span> Work9ja. All rights reserved.</span>
-      <span class="sprtn">Designed &amp; built by <a href="https://sprtn.net/">SPRTN</a></span>
     </div>
   </div>
 </footer>
 
 <script src="/assets/app.js" defer></script>
+<script>
+(function(){
+  var modal=document.getElementById('filtersModal');
+  var open=document.getElementById('openFilters');
+  function set(o){ modal.classList.toggle('open',o); modal.setAttribute('aria-hidden',!o); document.body.style.overflow=o?'hidden':''; }
+  open.addEventListener('click', function(){ set(true); });
+  modal.querySelectorAll('[data-close]').forEach(function(b){ b.addEventListener('click', function(){ set(false); }); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') set(false); });
+  document.getElementById('clearFilters').addEventListener('click', function(){
+    modal.querySelectorAll('input[type=checkbox]').forEach(function(c){ c.checked=false; });
+  });
+})();
+</script>
 </body>
 </html>

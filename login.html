@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Sign in or create your account — Work9ja</title>
+<title>Sign in or create your account - Work9ja</title>
 <meta name="description" content="Sign in to Work9ja or create a free account to find jobs, learn skills, build your profile and get hired across Nigeria." />
 <meta name="robots" content="noindex, follow" />
 <link rel="canonical" href="https://work9ja.sprtn.net/login.html" />
@@ -46,7 +46,7 @@
 
 .tabs{display:flex;gap:4px;background:var(--ink-3);border:1px solid var(--border);border-radius:100px;padding:4px;margin-top:28px}
 .tabs button{flex:1;font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);color:var(--text-2);background:none;border:0;padding:.7em 1em;border-radius:100px;cursor:pointer;transition:background .4s var(--quart-out),color .4s}
-.tabs button.on{background:var(--lime);color:var(--ink)}
+.tabs button.on{background:var(--lime);color:var(--on-accent)}
 
 form{margin-top:24px}
 .field{margin-bottom:16px}
@@ -61,8 +61,8 @@ form{margin-top:24px}
 .row-between label{display:flex;align-items:center;gap:8px;color:var(--text-2);font-size:var(--step--1);cursor:pointer}
 .row-between input{appearance:none;width:16px;height:16px;border:1.5px solid var(--border-strong);border-radius:5px;position:relative;cursor:pointer}
 .row-between input:checked{background:var(--lime);border-color:var(--lime)}
-.row-between input:checked::after{content:"";position:absolute;left:4.5px;top:1px;width:4px;height:9px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
-.row-between a{color:var(--lime);font-size:var(--step--1)}
+.row-between input:checked::after{content:"";position:absolute;left:4.5px;top:1px;width:4px;height:9px;border:solid var(--on-accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.row-between a{color:var(--accent-ink);font-size:var(--step--1)}
 .btn-full{width:100%;justify-content:center;padding:1em}
 .divider{display:flex;align-items:center;gap:14px;color:var(--text-3);font-size:var(--step--2);margin:22px 0}
 .divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--border)}
@@ -72,7 +72,7 @@ form{margin-top:24px}
 .mode-signup .only-signup{display:block}
 .mode-signup .only-signin{display:none}
 .switch-note{text-align:center;color:var(--text-2);font-size:var(--step--1);margin-top:24px}
-.switch-note button{background:none;border:0;color:var(--lime);font-family:inherit;font-size:inherit;cursor:pointer;padding:0}
+.switch-note button{background:none;border:0;color:var(--accent-ink);font-family:inherit;font-size:inherit;cursor:pointer;padding:0}
 .fineprint{color:var(--text-3);font-size:var(--step--2);margin-top:20px;line-height:1.5}
 .fineprint a{color:var(--text-2)}
 </style>
@@ -81,11 +81,11 @@ form{margin-top:24px}
 <body class="grain" id="auth">
 <div class="auth">
   <!-- brand panel -->
-  <aside class="auth-brand">
+  <aside class="auth-brand dark">
     <span class="glow" aria-hidden="true"></span>
-    <a href="/" class="wordmark" style="font-size:1.5rem"><span>work</span><span class="nine">9ja</span></a>
+    <a href="/" class="brand" aria-label="Work9ja home"><img src="/apple-icon.png" alt="Work9ja" class="brand-img" style="height:60px" /></a>
     <div>
-      <p class="lede">Your career <em>command centre</em> — one account for all of it.</p>
+      <p class="lede">Your career <em>command centre</em> - one account for all of it.</p>
       <div class="verbs"><span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span></div>
     </div>
     <p class="foot">Jobs · Academy · Network · AI Coach · Talent · Services</p>
@@ -167,7 +167,7 @@ form{margin-top:24px}
     tSignup.classList.toggle('on', signup); tSignin.classList.toggle('on', !signup);
     tSignup.setAttribute('aria-selected', signup); tSignin.setAttribute('aria-selected', !signup);
     title.textContent = signup ? 'Create your account' : 'Welcome back';
-    sub.textContent = signup ? 'Free to start — find jobs, learn and get hired.' : 'Sign in to pick up where you left off.';
+    sub.textContent = signup ? 'Free to start - find jobs, learn and get hired.' : 'Sign in to pick up where you left off.';
     label.textContent = signup ? 'Create account' : 'Sign in';
   }
   tSignin.addEventListener('click', function(){ mode(false); });

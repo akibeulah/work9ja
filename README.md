@@ -12,12 +12,13 @@ stay identical across all three.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Landing page — hero with product mockup, stats band, live job/service previews, 6-product ecosystem, AI engine, a light Academy section, testimonials, trust, CTA. |
+| `index.html` | Landing page — role-rotator hero (orbits an invisible globe, swaps roles), stats band, live job/service previews, 6-product ecosystem, AI engine, Academy, testimonials, trust, CTA. |
 | `jobs.html` | Jobs board with dummy listings — search bar, filter rail, 8 job cards with skill-match rings, pagination. |
 | `services.html` | Services marketplace with dummy providers — category chips, 9 provider cards, "how it works", dual CTA. |
-| `assets/app.css` | Shared design system: tokens, nav, footer, buttons, reveals, job/service cards, match ring. |
-| `assets/app.js` | Shared behaviour: Lenis smooth scroll (graceful fallback), mobile menu, scroll reveals, animated counters, match-ring/bar fills, magnetic buttons. |
-| `favicon.svg` | Brand mark (the "9" set in Space Grotesk, lime on ink). The brand's own name in type — not an invented logo. |
+| `login.html` | Sign-in / create-account page (UI only; doesn't post). All "Get started" / signup CTAs route here. `noindex`. |
+| `assets/app.css` | Shared design system. **Light default** via themeable tokens, with a reusable `.dark` class that restores the dark palette for signature bands (hero, CTA, login brand panel). |
+| `assets/app.js` | Shared behaviour: native smooth scroll, mobile menu, scroll reveals, animated counters, match-ring/bar fills, magnetic buttons. |
+| `favicon.ico` / `favicon.svg` / `apple-icon.png` | The **real Work9ja logo** lifted from work9ja.com (used in every header/footer). |
 | `og-image.jpg` | 1200×630 social share card, rendered from the hero (Pillow + Space Grotesk variable font; `make_og.py` in the session scratchpad). |
 | `og-image.svg` | Vector source of the share card. |
 | `robots.txt` | Allows all crawlers incl. GPTBot / ClaudeBot / PerplexityBot; points to the sitemap. |
