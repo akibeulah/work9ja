@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Work9ja — Your career command centre | Jobs, Academy, AI &amp; recruitment in Nigeria</title>
+<meta name="description" content="Work9ja is Nigeria's career command centre. Find jobs, learn in-demand skills, earn verified credentials, build your professional profile and get hired — with an AI career coach guiding every step. One account, six connected products." />
+<meta name="keywords" content="jobs in Nigeria, Nigerian job board, online courses Nigeria, AI CV builder, career coach, recruitment software Nigeria, professional network, freelance services Nigeria" />
+<meta name="robots" content="index, follow, max-image-preview:large" />
+<link rel="canonical" href="https://work9ja.sprtn.net/" />
+<meta name="theme-color" content="#0E1211" />
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Work9ja" />
+<meta property="og:title" content="Work9ja — Your career command centre" />
+<meta property="og:description" content="Find jobs, learn skills, earn credentials, build your network and get hired. One account, six connected products, one AI coach — built for Nigeria." />
+<meta property="og:url" content="https://work9ja.sprtn.net/" />
+<meta property="og:image" content="https://work9ja.sprtn.net/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Work9ja — Learn. Connect. Work. Grow." />
+<meta property="og:locale" content="en_NG" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Work9ja — Your career command centre" />
+<meta name="twitter:description" content="Jobs, Academy, Network, AI coach, recruiter suite and services — one account, built for Nigeria." />
+<meta name="twitter:image" content="https://work9ja.sprtn.net/og-image.jpg" />
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"Organization","@id":"https://work9ja.sprtn.net/#org","name":"Work9ja","url":"https://work9ja.sprtn.net/","logo":"https://work9ja.sprtn.net/og-image.jpg","description":"Nigeria's career command centre: jobs, learning, verified credentials, professional networking and AI-powered recruitment in one connected platform.","areaServed":"NG","sameAs":["https://www.work9ja.com/"]},
+    {"@type":"WebSite","@id":"https://work9ja.sprtn.net/#website","url":"https://work9ja.sprtn.net/","name":"Work9ja","publisher":{"@id":"https://work9ja.sprtn.net/#org"},"inLanguage":"en-NG"},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"What is Work9ja?","acceptedAnswer":{"@type":"Answer","text":"Work9ja is a unified career platform for Nigeria. One account lets you find jobs, learn in-demand skills, earn verified credentials, build a professional profile, connect with employers and get hired — guided by an AI career coach."}},
+      {"@type":"Question","name":"Is Work9ja free to use?","acceptedAnswer":{"@type":"Answer","text":"Creating a profile, searching jobs and starting courses is free. Premium tools, AI credits and employer recruitment plans are available for people and companies who want more."}},
+      {"@type":"Question","name":"Can employers recruit on Work9ja?","acceptedAnswer":{"@type":"Answer","text":"Yes. Work9ja Talent gives employers job posting, candidate filtering, an application pipeline, interview scheduling, team permissions and reporting in one recruiter workspace."}}
+    ]}
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&display=swap" />
+<link rel="stylesheet" href="/assets/app.css" />
+
+<style>
+/* ---------------- page-specific ---------------- */
+
+/* HERO */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;padding-top:110px;padding-bottom:60px;overflow:hidden}
+.hero-glow{position:absolute;z-index:0;width:70vw;height:70vw;max-width:900px;max-height:900px;right:-16vw;top:-14vw;background:radial-gradient(circle,rgba(198,242,78,.17),transparent 62%);pointer-events:none}
+.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:0.88fr 1.12fr;gap:clamp(28px,4vw,64px);align-items:center;width:100%}
+@media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.hero h1{font-size:clamp(2.5rem,1.5rem + 5vw,5.6rem);font-weight:700;letter-spacing:-0.04em;line-height:.92}
+.hero h1 .ln{display:block;overflow:hidden}
+.hero h1 .ln>span{display:block;transform:translateY(103%);transition:transform 1.05s var(--expo-out)}
+.loaded .hero h1 .ln>span{transform:translateY(0)}
+.hero h1 .ln:nth-child(2)>span{transition-delay:.08s}
+.hero h1 .outline{color:transparent;-webkit-text-stroke:1.4px var(--text-2)}
+.hero-lede{max-width:40ch;color:var(--text-2);font-size:var(--step-0);line-height:1.45;margin-top:22px}
+.hero-lede b{color:var(--text-1);font-weight:500}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px;opacity:0;transform:translateY(16px);transition:opacity .8s var(--expo-out) .5s,transform .8s var(--expo-out) .5s}
+.loaded .hero-cta{opacity:1;transform:none}
+.hero-proof{display:flex;align-items:center;gap:14px;margin-top:34px;color:var(--text-3);font-size:var(--step--1)}
+.hero-proof .faces{display:flex}
+.hero-proof .faces .avatar{width:34px;height:34px;margin-left:-10px;border:2px solid var(--ink);font-size:.72rem}
+.hero-proof .faces .avatar:first-child{margin-left:0}
+
+/* ===== hero role rotator (orbit around invisible globe) ===== */
+.orbit-stage{position:relative;height:clamp(440px,52vw,660px);perspective:1500px}
+@media(max-width:980px){.orbit-stage{height:480px;max-width:520px;margin-inline:auto}}
+
+/* the invisible globe — concentric rotating rings */
+.globe{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;z-index:0}
+.oring{position:absolute;border:1px solid var(--border);border-radius:50%;opacity:.55}
+.oring.r1{width:78%;height:78%;animation:gspin 30s linear infinite}
+.oring.r2{width:94%;height:58%;border-color:rgba(198,242,78,.22);animation:gspin 22s linear infinite reverse}
+.oring.r3{width:60%;height:96%;animation:gspin 38s linear infinite}
+.gdot{position:absolute;width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 18px 2px rgba(198,242,78,.6)}
+@keyframes gspin{to{transform:rotate(360deg)}}
+
+/* orbiting icon bubbles */
+.orbit{position:absolute;inset:8%;animation:oorbit 24s linear infinite;z-index:1}
+.obub{position:absolute;width:clamp(44px,6vw,56px);height:clamp(44px,6vw,56px);border-radius:16px;background:var(--ink-2);border:1px solid var(--border-strong);box-shadow:var(--shadow);display:grid;place-items:center}
+.obub:nth-child(1){top:-7%;left:50%;margin-left:-28px}
+.obub:nth-child(2){bottom:2%;left:-3%}
+.obub:nth-child(3){top:44%;right:-6%}
+.obub-ic{display:grid;place-items:center;color:var(--lime);animation:oorbit 24s linear infinite reverse;transition:transform .5s var(--expo-out),opacity .4s}
+.obub-ic svg{width:24px;height:24px;stroke:var(--lime);stroke-width:1.6;fill:none}
+.obub-ic.swap{transform:scale(.3) rotate(-40deg);opacity:0}
+@keyframes oorbit{to{transform:rotate(360deg)}}
+
+/* the role card deck */
+.role-deck{position:absolute;inset:7% 4% 7% 8%;z-index:3}
+.role-card{position:absolute;inset:0;background:var(--ink-3);border:1px solid var(--border-strong);border-radius:20px;box-shadow:var(--shadow);padding:24px;display:flex;flex-direction:column;backface-visibility:hidden;
+  transform-origin:center center;transition:transform .85s var(--expo-out),opacity .6s var(--quart-out);will-change:transform,opacity}
+.role-card.pre{transform:rotateY(52deg) translateX(58%) scale(.86);opacity:0}
+.role-card.exit{transform:rotateY(-52deg) translateX(-58%) scale(.86);opacity:0}
+.role-card .rc-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}
+.role-card .co{display:flex;gap:12px;align-items:center;min-width:0}
+.role-card .jc-logo{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;font-family:"Space Grotesk",sans-serif;font-weight:700;color:var(--ink);flex:none}
+.role-card .cn{font-family:"Space Grotesk",sans-serif;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.role-card .loc{color:var(--text-3);font-size:var(--step--2)}
+.role-card h3{font-size:clamp(1.15rem,1rem + .8vw,1.55rem);margin:18px 0 6px;letter-spacing:-0.02em}
+.role-card .metarow{display:flex;gap:8px;flex-wrap:wrap;margin-top:4px}
+.role-card .lvl{text-transform:capitalize}
+.role-card .sal{font-family:"Space Grotesk",sans-serif;font-weight:600;color:var(--bone);margin-top:16px;font-size:var(--step-1)}
+.role-card .skills{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+.role-card .rc-foot{margin-top:auto;padding-top:16px;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.role-card .rc-foot .view{font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);color:var(--lime);display:inline-flex;gap:6px;align-items:center}
+.role-card .rc-foot .date{color:var(--text-3);font-size:var(--step--2)}
+
+/* category badge (top-left, swaps) */
+.role-badge{position:absolute;left:-3%;top:2%;z-index:5;background:var(--lime);color:var(--ink);padding:11px 15px;border-radius:14px;font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:.84rem;display:flex;gap:9px;align-items:center;box-shadow:var(--shadow);transition:transform .5s var(--expo-out),opacity .4s}
+.role-badge svg{width:17px;height:17px;stroke:currentColor;stroke-width:2;fill:none}
+.role-badge.swap{transform:translateY(-10px) scale(.8);opacity:0}
+
+@media(prefers-reduced-motion:reduce){
+  .oring,.orbit,.obub-ic{animation:none!important}
+  .role-card{transition:opacity .3s}
+  .role-card.pre,.role-card.exit{transform:none;opacity:0}
+}
+
+/* verb marquee */
+.marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
+.marquee-track{display:flex;width:max-content;animation:scroll-x 45s linear infinite;will-change:transform}
+.mq-set{display:flex;flex:none}
+.mq-set span{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(1.4rem,4vw,2.4rem);letter-spacing:-0.02em;padding:.5em 0;display:inline-flex;align-items:center;white-space:nowrap}
+.mq-set span::after{content:"";width:9px;height:9px;border-radius:50%;background:var(--lime);margin:0 clamp(26px,5vw,60px)}
+@keyframes scroll-x{to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+
+/* STATS band */
+.stats{border-bottom:1px solid var(--border)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+@media(max-width:760px){.stats-grid{grid-template-columns:repeat(2,1fr)}}
+.stat .v{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:var(--step-3);letter-spacing:-0.03em;line-height:1}
+.stat .v .plus{color:var(--lime)}
+.stat .k{color:var(--text-2);margin-top:10px;font-size:var(--step--1)}
+
+/* ECOSYSTEM products */
+.prod-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.card{background:var(--ink-3);border:1px solid var(--border);border-radius:18px;padding:28px;display:flex;flex-direction:column;min-height:260px;position:relative;overflow:hidden;transition:border-color .5s var(--quart-out),transform .6s var(--expo-out)}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(198,242,78,.10),transparent 60%);opacity:0;transition:opacity .5s}
+.card:hover{border-color:var(--border-strong);transform:translateY(-4px)}
+.card:hover::before{opacity:1}
+.card .ico{width:46px;height:46px;border-radius:13px;background:rgba(198,242,78,.12);display:grid;place-items:center;color:var(--lime)}
+.card .ico svg{width:24px;height:24px;stroke:var(--lime);stroke-width:1.5;fill:none}
+.card h3{font-size:var(--step-1);margin:20px 0 8px}
+.card p{color:var(--text-2);font-size:var(--step--1);line-height:1.5}
+.card .go{margin-top:auto;padding-top:18px;color:var(--text-3);font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);display:flex;align-items:center;gap:8px;transition:color .4s}
+.card:hover .go{color:var(--lime)}
+.card .go svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .5s var(--expo-out)}
+.card:hover .go svg{transform:translateX(4px)}
+.card.lg{grid-column:span 3}.card.md{grid-column:span 3}.card.sm{grid-column:span 2}
+@media(max-width:1000px){.prod-grid{grid-template-columns:repeat(2,1fr)}.card.lg,.card.md,.card.sm{grid-column:span 1}}
+@media(max-width:560px){.prod-grid{grid-template-columns:1fr}}
+
+/* generic preview grid */
+.preview-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:34px;flex-wrap:wrap}
+.cols-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.cols-3{grid-template-columns:1fr}}
+.seeall{font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);display:inline-flex;gap:8px;align-items:center;color:var(--lime)}
+.seeall svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none;transition:transform .5s var(--expo-out)}
+.seeall:hover svg{transform:translateX(4px)}
+
+/* AI engine */
+.ai-split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,80px);align-items:center}
+@media(max-width:900px){.ai-split{grid-template-columns:1fr}}
+.ai-item{border-top:1px solid var(--border);padding:20px 0;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+.ai-item .n{font-family:"Space Grotesk",sans-serif;color:var(--lime);font-size:var(--step--1)}
+.ai-item h3{font-size:var(--step-1)}
+.ai-item p{color:var(--text-2);font-size:var(--step--1);margin-top:6px}
+.weights{background:var(--ink-3);border:1px solid var(--border);border-radius:20px;padding:clamp(24px,3vw,36px)}
+.weights .cap{font-size:var(--step--1);color:var(--text-3);margin-bottom:22px}
+.wrow{margin-bottom:18px}
+.wrow .lab{display:flex;justify-content:space-between;font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);margin-bottom:8px}
+.wrow .lab .pct{color:var(--lime)}
+.wtrack{height:8px;border-radius:100px;background:rgba(244,243,238,.08);overflow:hidden}
+.wfill{height:100%;width:0;border-radius:100px;background:linear-gradient(90deg,var(--lime-deep),var(--lime));transition:width 1.3s var(--expo-out)}
+.weights.in .wfill{width:var(--w)}
+.weights .foot{color:var(--text-3);font-size:.78rem;margin-top:18px;line-height:1.5}
+
+/* ACADEMY (light section) */
+.course{background:#fff;border:1px solid var(--l-border);border-radius:var(--r-md);overflow:hidden;transition:transform .55s var(--expo-out),box-shadow .5s}
+.course:hover{transform:translateY(-5px);box-shadow:0 30px 60px -34px rgba(0,0,0,.35)}
+.course .thumb{aspect-ratio:16/10;display:flex;align-items:flex-end;padding:18px;position:relative}
+.course .thumb .lvl{font-family:"Space Grotesk",sans-serif;font-size:var(--step--2);background:rgba(17,21,15,.72);color:var(--bone);padding:.35em .8em;border-radius:100px}
+.course .body{padding:22px}
+.course .body .trk{font-family:"Space Grotesk",sans-serif;font-size:var(--step--2);letter-spacing:.08em;text-transform:uppercase;color:var(--l-text-3)}
+.course h3{font-size:var(--step-1);margin:8px 0 10px;color:var(--l-text-1)}
+.course .meta{display:flex;gap:16px;color:var(--l-text-2);font-size:var(--step--1);margin-top:14px;padding-top:14px;border-top:1px solid var(--l-border)}
+.tracks{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.tracks .pill{border-color:var(--l-border);color:var(--l-text-2)}
+
+/* EMPLOYERS dashboard */
+.ai-bg{background:var(--ink-2);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.emp-split{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(36px,6vw,74px);align-items:center}
+@media(max-width:920px){.emp-split{grid-template-columns:1fr}}
+.dash{background:var(--ink-3);border:1px solid var(--border);border-radius:20px;padding:clamp(22px,3vw,32px)}
+.dash-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:22px}
+.dash-top .dot{display:flex;gap:6px}
+.dash-top .dot i{width:9px;height:9px;border-radius:50%;background:var(--border-strong)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+.kpi{background:var(--ink-2);border:1px solid var(--border);border-radius:12px;padding:16px}
+.kpi .v{font-family:"Space Grotesk",sans-serif;font-size:var(--step-2);line-height:1;letter-spacing:-0.02em}
+.kpi .k{color:var(--text-3);font-size:.75rem;margin-top:8px}
+.pipe{display:flex;flex-direction:column;gap:10px}
+.pipe .stage{display:grid;grid-template-columns:86px 1fr auto;gap:14px;align-items:center;font-size:var(--step--1)}
+.pipe .nm{color:var(--text-2)}
+.pipe .ptrack{height:7px;background:rgba(244,243,238,.07);border-radius:100px;overflow:hidden}
+.pipe .pfill{height:100%;width:0;background:var(--lime);border-radius:100px;transition:width 1.2s var(--expo-out)}
+.dash.in .pfill{width:var(--pw)}
+.pipe .ct{font-family:"Space Grotesk",sans-serif;color:var(--text-1)}
+.illus{color:var(--text-3);font-size:.75rem;margin-top:16px}
+.emp-feats{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+
+/* TESTIMONIALS */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.quotes{grid-template-columns:1fr}}
+.quote{background:var(--ink-3);border:1px solid var(--border);border-radius:18px;padding:28px;display:flex;flex-direction:column}
+.quote p{font-size:var(--step-0);line-height:1.5}
+.quote .who{display:flex;gap:12px;align-items:center;margin-top:24px;padding-top:20px;border-top:1px solid var(--border)}
+.quote .who .nm{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:var(--step--1)}
+.quote .who .rl{color:var(--text-3);font-size:var(--step--2)}
+.quote .stars{color:var(--lime);font-size:var(--step--1);letter-spacing:2px}
+
+/* TRUST */
+.trust-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:820px){.trust-grid{grid-template-columns:1fr}}
+.trust{border-top:1px solid var(--border-strong);padding-top:20px}
+.trust h3{font-size:var(--step-0);margin-bottom:8px}
+.trust p{color:var(--text-2);font-size:var(--step--1)}
+
+/* CTA */
+.cta{text-align:center;position:relative;overflow:hidden}
+.cta .cta-glow{position:absolute;inset:auto 0 -40% 0;height:80%;background:radial-gradient(60% 100% at 50% 100%,rgba(198,242,78,.14),transparent 70%);pointer-events:none}
+.cta h2{font-size:var(--display);line-height:.92;letter-spacing:-0.045em;position:relative}
+.cta h2 em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--lime)}
+.cta p{color:var(--text-2);max-width:48ch;margin:26px auto 0;font-size:var(--step-1);position:relative}
+.cta .row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:40px;position:relative}
+</style>
+</head>
+
+<body class="grain">
+
+<header class="nav" id="nav">
+  <div class="wrap nav-row">
+    <a href="/" class="wordmark" aria-label="Work9ja home"><span>work</span><span class="nine">9ja</span></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="navlinks">
+      <svg viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+    <nav class="nav-links" id="navlinks" aria-label="Primary">
+      <a href="/jobs.html">Jobs</a>
+      <a href="#academy">Academy</a>
+      <a href="#ecosystem">Network</a>
+      <a href="/services.html">Services</a>
+      <a href="#engine">AI Coach</a>
+      <a href="#employers">For employers</a>
+      <a href="#start" class="btn btn-primary" data-magnetic>Get started
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<!-- ===== HERO ===== -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero-glow" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>
+        <span class="ln"><span>Your career</span></span>
+        <span class="ln"><span class="outline">command centre.</span></span>
+      </h1>
+      <p class="hero-lede"><b>Find jobs, learn real skills, earn verified credentials and grow your network</b> — guided by an AI coach, all from one account.</p>
+      <div class="hero-cta">
+        <a href="#start" class="btn btn-primary" data-magnetic>Create your free profile
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="/jobs.html" class="btn btn-ghost" data-magnetic>Browse jobs</a>
+      </div>
+      <div class="hero-proof">
+        <span class="faces" aria-hidden="true">
+          <span class="avatar" style="background:#C6F24E">A</span>
+          <span class="avatar" style="background:#8FD6B4">N</span>
+          <span class="avatar" style="background:#F2B705">C</span>
+          <span class="avatar" style="background:#FF6A3D">T</span>
+        </span>
+        <span>Join thousands building their careers the connected way.</span>
+      </div>
+    </div>
+
+    <!-- role rotator orbiting an invisible globe -->
+    <div class="orbit-stage" id="orbitStage" aria-hidden="true">
+      <div class="globe">
+        <span class="oring r1"></span><span class="oring r2"></span><span class="oring r3"></span>
+        <span class="gdot"></span>
+      </div>
+      <div class="orbit" id="orbit">
+        <span class="obub"><span class="obub-ic"></span></span>
+        <span class="obub"><span class="obub-ic"></span></span>
+        <span class="obub"><span class="obub-ic"></span></span>
+      </div>
+      <div class="role-deck" id="roleDeck"></div>
+      <div class="role-badge" id="roleBadge"></div>
+    </div>
+    <p class="sr-live" aria-live="polite" id="roleLive" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="mq-set">
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+    </div>
+    <div class="mq-set">
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+      <span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== STATS ===== -->
+<section class="stats" aria-label="Platform at a glance">
+  <div class="wrap stats-grid">
+    <div class="stat reveal"><div class="v mono-num"><span data-count="18000" data-suffix="">0</span><span class="plus">+</span></div><div class="k">Jobs across Nigeria</div></div>
+    <div class="stat reveal" data-d="1"><div class="v mono-num"><span data-count="320" data-suffix="">0</span><span class="plus">+</span></div><div class="k">Courses &amp; learning paths</div></div>
+    <div class="stat reveal" data-d="2"><div class="v mono-num"><span data-count="2400" data-suffix="">0</span><span class="plus">+</span></div><div class="k">Employers hiring</div></div>
+    <div class="stat reveal" data-d="3"><div class="v mono-num"><span data-count="6" data-suffix="">0</span></div><div class="k">Products, one account</div></div>
+  </div>
+  <div class="wrap" style="margin-top:22px"><p style="color:var(--text-3);font-size:var(--step--2)">Illustrative launch targets — not current verified metrics.</p></div>
+</section>
+
+<!-- ===== FEATURED JOBS ===== -->
+<section aria-label="Featured jobs">
+  <div class="wrap">
+    <div class="preview-head">
+      <div>
+<h2 style="font-size:var(--step-2);max-width:18ch;margin-top:16px">Roles matched to your skills — not a wall of listings.</h2>
+      </div>
+      <a href="/jobs.html" class="seeall">Browse all jobs <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="cols-3">
+      <a href="/jobs.html" class="jobcard reveal">
+        <div class="jc-top">
+          <span class="jc-logo" style="background:#8FD6B4">FW</span>
+          <span class="ring" data-bars style="--p:96;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">96%</span></span>
+        </div>
+        <h3>Product Designer</h3>
+        <div class="co">Flutterwave · Lagos (Hybrid)</div>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">Figma</span><span class="pill">Senior</span></div>
+        <div class="sal"><span class="amt">₦600k – ₦900k</span><span class="time">2 days ago</span></div>
+      </a>
+      <a href="/jobs.html" class="jobcard reveal" data-d="1">
+        <div class="jc-top">
+          <span class="jc-logo" style="background:#F2B705">KD</span>
+          <span class="ring" data-bars style="--p:89;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">89%</span></span>
+        </div>
+        <h3>Customer Success Lead</h3>
+        <div class="co">Kuda · Remote (Nigeria)</div>
+        <div class="meta"><span class="pill">Remote</span><span class="pill">CRM</span><span class="pill">Mid-level</span></div>
+        <div class="sal"><span class="amt">₦400k – ₦550k</span><span class="time">Today</span></div>
+      </a>
+      <a href="/jobs.html" class="jobcard reveal" data-d="2">
+        <div class="jc-top">
+          <span class="jc-logo" style="background:#FF6A3D">MN</span>
+          <span class="ring" data-bars style="--p:82;--size:46px"><svg width="46" height="46" viewBox="0 0 46 46"><circle class="track" cx="23" cy="23" r="19" fill="none" stroke-width="4"/><circle class="bar" cx="23" cy="23" r="19" fill="none" stroke-width="4" style="--c:119.4"/></svg><span class="val">82%</span></span>
+        </div>
+        <h3>Data Analyst</h3>
+        <div class="co">MTN Nigeria · Abuja</div>
+        <div class="meta"><span class="pill">Full-time</span><span class="pill">SQL</span><span class="pill">Power BI</span></div>
+        <div class="sal"><span class="amt">₦350k – ₦500k</span><span class="time">1 day ago</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ECOSYSTEM ===== -->
+<section id="ecosystem" aria-label="The ecosystem">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">Six products.<br>One account that remembers you.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">Your profile, skills and history follow you everywhere — so each product makes the next one smarter. Not six apps. One journey.</p>
+    </div>
+    <div class="prod-grid">
+      <a href="/jobs.html" class="card lg reveal" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 13h18"/></svg></span>
+        <h3>Work9ja Jobs</h3>
+        <p>Search, filter and apply with one profile. AI matching surfaces roles that fit your skills, location and salary — no endless scrolling.</p>
+        <span class="go">Explore jobs <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#academy" class="card md reveal" data-d="1" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M3 8l9-4 9 4-9 4-9-4z"/><path d="M7 10v5c0 1.2 2.5 2.5 5 2.5s5-1.3 5-2.5v-5M21 8v5"/></svg></span>
+        <h3>Work9ja Academy</h3>
+        <p>Courses, quizzes and paths across five career tracks, with verifiable credentials you add straight to your profile.</p>
+        <span class="go">Start learning <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <div class="card sm reveal" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="3"/><circle cx="17" cy="8" r="3"/><path d="M2 20c0-2.8 2.2-5 5-5s5 2.2 5 5M13 20c0-2.8 2.2-5 5-5s4 1.2 4 3"/></svg></span>
+        <h3>Work9ja Network</h3>
+        <p>Profiles, connections, posts and company pages — a professional network built for Nigeria.</p>
+      </div>
+      <a href="#engine" class="card sm reveal" data-d="1" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="3.2"/></svg></span>
+        <h3>Work9ja AI</h3>
+        <p>A CV builder, interview coach and career planner working from your real profile — never inventing qualifications.</p>
+        <span class="go">Meet the coach <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="#employers" class="card md reveal" data-d="2" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h5"/><circle cx="17" cy="14.5" r="1"/></svg></span>
+        <h3>Work9ja Talent</h3>
+        <p>A full recruiter workspace: post jobs, filter candidates, run a pipeline, schedule interviews and manage your team.</p>
+        <span class="go">For employers <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a href="/services.html" class="card lg reveal" data-d="3" data-spotlight>
+        <span class="ico"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/></svg></span>
+        <h3>Work9ja Services</h3>
+        <p>Freelancers and skilled artisans list services and respond to requests — turning verified skills into income, not just employment.</p>
+        <span class="go">Hire a pro <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AI ENGINE ===== -->
+<section class="ai-bg" id="engine" aria-label="AI Career Intelligence">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">Not a chatbot.<br>A coach that gets you hired.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">Every AI feature drives a real outcome — a sharper CV, a better-matched role, a clearer next step — with your explicit consent before anything personal is processed.</p>
+    </div>
+    <div class="ai-split">
+      <div>
+        <div class="ai-item reveal"><span class="n">01</span><div><h3>AI CV Builder</h3><p>Turns your profile into a structured, tailored resume and sharpens the wording — without inventing qualifications you don't have.</p></div></div>
+        <div class="ai-item reveal" data-d="1"><span class="n">02</span><div><h3>Intelligent Job Matching</h3><p>Weighs skills, experience, location, salary and preferences to recommend roles you can actually get.</p></div></div>
+        <div class="ai-item reveal" data-d="2"><span class="n">03</span><div><h3>Career Roadmap Generator</h3><p>Spots your skills gaps and maps the courses, projects and realistic steps to close them.</p></div></div>
+        <div class="ai-item reveal" data-d="3"><span class="n">04</span><div><h3>Interview Simulator</h3><p>Runs role-specific mock interviews and gives feedback you can act on before the real thing.</p></div></div>
+        <div class="ai-item reveal" data-d="4"><span class="n">05</span><div><h3>Employer AI Assistant</h3><p>Summarises applications and surfaces job-relevant evidence for recruiters — it never auto-rejects a candidate.</p></div></div>
+      </div>
+      <div class="weights reveal" data-d="1" data-bars>
+        <p class="cap">How a match score is built — illustrative weights</p>
+        <div class="wrow"><div class="lab"><span>Relevant skills</span><span class="pct">40%</span></div><div class="wtrack"><div class="wfill" style="--w:40%"></div></div></div>
+        <div class="wrow"><div class="lab"><span>Experience</span><span class="pct">25%</span></div><div class="wtrack"><div class="wfill" style="--w:25%"></div></div></div>
+        <div class="wrow"><div class="lab"><span>Location / remote fit</span><span class="pct">15%</span></div><div class="wtrack"><div class="wfill" style="--w:15%"></div></div></div>
+        <div class="wrow"><div class="lab"><span>Salary alignment</span><span class="pct">10%</span></div><div class="wtrack"><div class="wfill" style="--w:10%"></div></div></div>
+        <div class="wrow"><div class="lab"><span>Career preferences</span><span class="pct">10%</span></div><div class="wtrack"><div class="wfill" style="--w:10%"></div></div></div>
+        <p class="foot">Initial product-design weights, validated against real candidate outcomes. Mandatory requirements are evaluated separately.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ACADEMY (light) ===== -->
+<section class="section--light" id="academy" aria-label="Academy">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">Learn a skill.<br>Then find the job that needs it.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">The edge is learning-to-employment: finish a course, update your skills profile, and instantly discover roles that require exactly what you earned.</p>
+    </div>
+    <div class="cols-3">
+      <article class="course reveal">
+        <div class="thumb" style="background:linear-gradient(135deg,#1B2320,#2b3a33)"><span class="lvl">Beginner</span></div>
+        <div class="body"><span class="trk">Digital &amp; technology</span><h3>Data Analytics with Excel &amp; SQL</h3><div class="meta"><span>8 weeks</span><span>· Certificate</span><span>· 24 lessons</span></div></div>
+      </article>
+      <article class="course reveal" data-d="1">
+        <div class="thumb" style="background:linear-gradient(135deg,#2a2416,#4a3f1f)"><span class="lvl">Intermediate</span></div>
+        <div class="body"><span class="trk">Business &amp; marketing</span><h3>Digital Marketing &amp; Growth</h3><div class="meta"><span>6 weeks</span><span>· Certificate</span><span>· 18 lessons</span></div></div>
+      </article>
+      <article class="course reveal" data-d="2">
+        <div class="thumb" style="background:linear-gradient(135deg,#241a2a,#3f2f4a)"><span class="lvl">All levels</span></div>
+        <div class="body"><span class="trk">Creative &amp; media</span><h3>UI/UX Design Foundations</h3><div class="meta"><span>10 weeks</span><span>· Certificate</span><span>· 30 lessons</span></div></div>
+      </article>
+    </div>
+    <div class="tracks reveal" data-d="2">
+      <span class="pill">Digital &amp; technology</span>
+      <span class="pill">Business, sales &amp; marketing</span>
+      <span class="pill">Administrative &amp; office</span>
+      <span class="pill">Creative &amp; media</span>
+      <span class="pill">Vocational &amp; technical trades</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES PREVIEW ===== -->
+<section aria-label="Services">
+  <div class="wrap">
+    <div class="preview-head">
+      <div>
+<h2 style="font-size:var(--step-2);max-width:20ch;margin-top:16px">Skills pay the bills — even between jobs.</h2>
+      </div>
+      <a href="/services.html" class="seeall">Browse all services <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+    <div class="cols-3">
+      <article class="svc reveal">
+        <div class="svc-top"><span class="avatar" style="background:#8FD6B4">CO</span><div class="who"><div class="nm">Chidi Okafor</div><div class="role">Brand &amp; Logo Designer</div></div></div>
+        <div class="rate"><span class="star">★</span> 4.9 <span style="color:var(--text-3)">· 128 jobs</span></div>
+        <div class="svc-foot"><span class="price">₦45,000 <small>/ project</small></span><span class="pill pill--lime">Top rated</span></div>
+      </article>
+      <article class="svc reveal" data-d="1">
+        <div class="svc-top"><span class="avatar" style="background:#F2B705">AB</span><div class="who"><div class="nm">Aisha Bello</div><div class="role">Social Media Manager</div></div></div>
+        <div class="rate"><span class="star">★</span> 4.8 <span style="color:var(--text-3)">· 76 jobs</span></div>
+        <div class="svc-foot"><span class="price">₦80,000 <small>/ month</small></span><span class="pill">Available</span></div>
+      </article>
+      <article class="svc reveal" data-d="2">
+        <div class="svc-top"><span class="avatar" style="background:#FF6A3D">EU</span><div class="who"><div class="nm">Emeka Umeh</div><div class="role">Electrical &amp; Solar Installer</div></div></div>
+        <div class="rate"><span class="star">★</span> 5.0 <span style="color:var(--text-3)">· 54 jobs</span></div>
+        <div class="svc-foot"><span class="price">From ₦25,000</span><span class="pill pill--lime">Verified</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===== EMPLOYERS ===== -->
+<section class="ai-bg" id="employers" aria-label="For employers">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">Hire from the pool you helped train.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">Post roles, filter on verified skills, and move people through a pipeline your whole team can see — in one recruiter workspace.</p>
+    </div>
+    <div class="emp-split">
+      <div>
+        <p class="reveal" style="color:var(--text-2);max-width:40ch">A single workspace for job posting, candidate filters, application pipelines, interview scheduling, team permissions, notes, reporting and subscription management.</p>
+        <div class="emp-feats reveal" data-d="1">
+          <span class="pill">Job posting</span><span class="pill">Candidate filters</span><span class="pill">Pipeline</span><span class="pill">Interview scheduling</span><span class="pill">Team roles</span><span class="pill">Reporting</span>
+        </div>
+        <a href="#start" class="btn btn-primary reveal" data-d="2" data-magnetic style="margin-top:28px">Start recruiting
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="dash reveal" data-d="1" data-bars role="img" aria-label="Illustrative recruiter dashboard: 12 active jobs, 248 applications, 32 interviews, 8 hires, with a hiring pipeline.">
+        <div class="dash-top">
+          <span class="wordmark" style="font-size:1rem"><span>work</span><span class="nine">9ja</span> <span style="color:var(--text-3);font-weight:400;margin-left:6px;font-family:'Hanken Grotesk'">Talent</span></span>
+          <span class="dot" aria-hidden="true"><i></i><i></i><i></i></span>
+        </div>
+        <div class="kpis">
+          <div class="kpi"><div class="v" data-count="12">0</div><div class="k">Active jobs</div></div>
+          <div class="kpi"><div class="v" data-count="248">0</div><div class="k">Applications</div></div>
+          <div class="kpi"><div class="v" data-count="32">0</div><div class="k">Interviews</div></div>
+          <div class="kpi"><div class="v" data-count="8">0</div><div class="k">Hires</div></div>
+        </div>
+        <div class="pipe">
+          <div class="stage"><span class="nm">Applied</span><span class="ptrack"><span class="pfill" style="--pw:100%"></span></span><span class="ct">248</span></div>
+          <div class="stage"><span class="nm">Reviewed</span><span class="ptrack"><span class="pfill" style="--pw:45%"></span></span><span class="ct">112</span></div>
+          <div class="stage"><span class="nm">Interview</span><span class="ptrack"><span class="pfill" style="--pw:13%"></span></span><span class="ct">32</span></div>
+          <div class="stage"><span class="nm">Hired</span><span class="ptrack"><span class="pfill" style="--pw:4%"></span></span><span class="ct">8</span></div>
+        </div>
+        <p class="illus">Demonstration data only — not actual Work9ja business metrics.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section aria-label="What people say">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">From searching to signed.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">Illustrative stories showing the journey Work9ja is built to deliver.</p>
+    </div>
+    <div class="quotes">
+      <figure class="quote reveal" style="margin:0">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p style="margin-top:14px">"I took the data course, the credential landed on my profile, and two weeks later I matched with an analyst role. One account did all of it."</p>
+        <figcaption class="who"><span class="avatar" style="background:#8FD6B4">BA</span><div><div class="nm">Blessing A.</div><div class="rl">Data Analyst, Lagos</div></div></figcaption>
+      </figure>
+      <figure class="quote reveal" data-d="1" style="margin:0">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p style="margin-top:14px">"The AI coach rewrote my CV for each role instead of me sending the same one everywhere. My interview rate actually went up."</p>
+        <figcaption class="who"><span class="avatar" style="background:#F2B705">TI</span><div><div class="nm">Tunde I.</div><div class="rl">Sales Manager, Abuja</div></div></figcaption>
+      </figure>
+      <figure class="quote reveal" data-d="2" style="margin:0">
+        <div class="stars" aria-hidden="true">★★★★★</div>
+        <p style="margin-top:14px">"As an employer, filtering on verified skills instead of keyword-stuffed CVs saved my team hours on every role we posted."</p>
+        <figcaption class="who"><span class="avatar" style="background:#FF6A3D">NE</span><div><div class="nm">Ngozi E.</div><div class="rl">HR Lead, fintech</div></div></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST ===== -->
+<section class="ai-bg" aria-label="Security and trust">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+<h2 class="reveal" data-d="1" style="margin-top:18px">Your identity and CV are not a side note.</h2>
+      </div>
+      <p class="sub reveal" data-d="2">Work9ja handles real identities, employment histories and payments — so security and Nigerian data-protection compliance are built in, not bolted on.</p>
+    </div>
+    <div class="trust-grid">
+      <div class="trust reveal"><h3>Row-level data isolation</h3><p>Every record is access-scoped and tested for cross-user and cross-company leaks. You see your applications; recruiters see only theirs.</p></div>
+      <div class="trust reveal" data-d="1"><h3>Private, signed storage</h3><p>CVs and documents live in private buckets with short-lived signed links — never a public URL anyone can guess.</p></div>
+      <div class="trust reveal" data-d="2"><h3>Verified employers</h3><p>Employer verification, scam-job reporting and moderation keep fake postings off the platform.</p></div>
+      <div class="trust reveal" data-d="3"><h3>Secure payments</h3><p>Server-verified, idempotent billing with secure webhooks — no privileged keys ever touch the browser.</p></div>
+      <div class="trust reveal" data-d="4"><h3>Admin MFA &amp; audit logs</h3><p>Multi-factor for administrators, full audit trails, backups and tested recovery drills.</p></div>
+      <div class="trust reveal" data-d="5"><h3>Consent &amp; deletion</h3><p>Clear privacy notices, explicit consent before AI processes your data, and real data-deletion workflows.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta" id="start" aria-label="Get started">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="wrap">
+    <h2 class="reveal">Build your future <em>with</em><br>Work9ja.</h2>
+    <p class="reveal" data-d="1">Find your next opportunity, develop valuable skills and grow your professional network — start free, in minutes.</p>
+    <div class="row reveal" data-d="2">
+      <a href="https://www.work9ja.com/" class="btn btn-primary" data-magnetic>Create your free profile
+        <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+      <a href="#employers" class="btn btn-ghost" data-magnetic>Talk to us about hiring</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer aria-label="Footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="wordmark"><span>work</span><span class="nine">9ja</span></a>
+        <p class="foot-blurb">Nigeria's career command centre — learn, connect, work and grow from one account.</p>
+      </div>
+      <div><h4>Platform</h4><ul>
+        <li><a href="/jobs.html">Jobs</a></li>
+        <li><a href="#academy">Academy</a></li>
+        <li><a href="#ecosystem">Network</a></li>
+        <li><a href="/services.html">Services</a></li>
+        <li><a href="#engine">AI Coach</a></li>
+      </ul></div>
+      <div><h4>For employers</h4><ul>
+        <li><a href="#employers">Work9ja Talent</a></li>
+        <li><a href="#employers">Post a job</a></li>
+        <li><a href="#engine">AI assistant</a></li>
+        <li><a href="#start">Pricing</a></li>
+      </ul></div>
+      <div><h4>Company</h4><ul>
+        <li><a href="https://www.work9ja.com/">About</a></li>
+        <li><a href="#start">Contact</a></li>
+        <li><a href="#start">Privacy</a></li>
+        <li><a href="#start">Terms</a></li>
+      </ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="yr">2026</span> Work9ja. All rights reserved.</span>
+      <span class="sprtn">Designed &amp; built by <a href="https://sprtn.net/">SPRTN</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/app.js" defer></script>
+
+<!-- hero role rotator -->
+<script>
+(function(){
+  var deck = document.getElementById('roleDeck');
+  var badge = document.getElementById('roleBadge');
+  var orbit = document.getElementById('orbit');
+  var live = document.getElementById('roleLive');
+  if(!deck) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var ICON = {
+    wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L4 17v3h3l5.3-5.3a4 4 0 0 0 5.4-5.4l-2.3 2.3-2-2 2.3-2.3z"/>',
+    droplet:'<path d="M12 3s6 6.3 6 10.5a6 6 0 0 1-12 0C6 9.3 12 3 12 3z"/>',
+    gauge:'<path d="M4 18a8 8 0 1 1 16 0"/><path d="M12 14l4-3"/>',
+    pen:'<path d="M12 19l7-7-3.5-3.5-7 7L7 21z"/><path d="M14.5 6.5l3 3"/>',
+    palette:'<path d="M12 3a9 9 0 1 0 0 18c1.3 0 2-1 2-2s1-2 2-2h2a3 3 0 0 0 0-6 9 9 0 0 0-8-8z"/><circle cx="8.5" cy="10.5" r="1"/><circle cx="12" cy="7.5" r="1"/><circle cx="15.5" cy="10" r="1"/>',
+    layers:'<path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/>'
+  };
+  var CAT = {
+    plumbing:{ label:'Plumbing', badge:'wrench', bubbles:['wrench','droplet','gauge'] },
+    creative:{ label:'Creative', badge:'pen',    bubbles:['pen','palette','layers'] }
+  };
+
+  // sample roles lifted from the main site, alternating category so the orbit visibly swaps
+  var roles = [
+    {t:'Plumbing Project Coordinator', co:'Adero Plumbing Services', in:'AP', cc:'#8FD6B4', loc:'Kano, Kano',          type:'Full Time', lvl:'expert',       min:0,      max:0,      m:88, cat:'plumbing'},
+    {t:'Visual Content Designer',      co:'PixelForge Creative',     in:'PF', cc:'#C6A0F2', loc:'Benin City, Edo',      type:'Full Time', lvl:'intermediate', min:185000, max:325000, m:93, cat:'creative'},
+    {t:'Pipe Fitting Specialist',      co:'Adero Plumbing Services', in:'AP', cc:'#8FD6B4', loc:'Abuja, FCT',           type:'Full Time', lvl:'expert',       min:110000, max:200000, m:91, cat:'plumbing'},
+    {t:'Illustration Artist',          co:'PixelForge Creative',     in:'PF', cc:'#C6A0F2', loc:'Kano, Kano',           type:'Full Time', lvl:'entry',        min:0,      max:0,      m:82, cat:'creative'},
+    {t:'Water Systems Technician',     co:'Adero Plumbing Services', in:'AP', cc:'#8FD6B4', loc:'Ibadan, Oyo',          type:'Full Time', lvl:'intermediate', min:125000, max:225000, m:84, cat:'plumbing'},
+    {t:'Presentation Designer',        co:'PixelForge Creative',     in:'PF', cc:'#C6A0F2', loc:'Abeokuta, Ogun',       type:'Part Time', lvl:'entry',        min:200000, max:350000, m:86, cat:'creative'},
+    {t:'Drainage Maintenance Technician', co:'Adero Plumbing Services', in:'AP', cc:'#8FD6B4', loc:'Port Harcourt, Rivers', type:'Full Time', lvl:'entry',  min:140000, max:250000, m:79, cat:'plumbing'}
+  ];
+  var SKILLS = ['Communication','Problem-solving','Teamwork'];
+
+  function money(mn,mx){ if(!mn && !mx) return 'Negotiable'; if(!mn) return '₦'+mx.toLocaleString(); return '₦'+mn.toLocaleString()+' – ₦'+mx.toLocaleString(); }
+  function svg(name){ return '<svg viewBox="0 0 24 24">'+ICON[name]+'</svg>'; }
+
+  function build(r){
+    var el = document.createElement('article');
+    el.className = 'role-card pre';
+    el.innerHTML =
+      '<div class="rc-top">'+
+        '<div class="co"><span class="jc-logo" style="background:'+r.cc+'">'+r.in+'</span>'+
+        '<div style="min-width:0"><div class="cn">'+r.co+'</div><div class="loc">'+r.loc+'</div></div></div>'+
+        '<span class="ring" style="--p:'+r.m+';--size:48px"><svg width="48" height="48" viewBox="0 0 48 48"><circle class="track" cx="24" cy="24" r="19" fill="none" stroke-width="4.5"/><circle class="bar" cx="24" cy="24" r="19" fill="none" stroke-width="4.5" style="--c:119.4"/></svg><span class="val">'+r.m+'%</span></span>'+
+      '</div>'+
+      '<h3>'+r.t+'</h3>'+
+      '<div class="metarow"><span class="pill">'+r.type+'</span><span class="pill pill--lime lvl">'+r.lvl+'</span></div>'+
+      '<div class="sal">'+money(r.min,r.max)+'</div>'+
+      '<div class="skills">'+SKILLS.map(function(s){return '<span class="pill">'+s+'</span>';}).join('')+'</div>'+
+      '<div class="rc-foot"><span class="date">13/10/2026</span><span class="view">View Job <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></div>';
+    return el;
+  }
+
+  function paintCat(cat){
+    var c = CAT[cat];
+    badge.classList.add('swap');
+    var bubbles = orbit.querySelectorAll('.obub-ic');
+    bubbles.forEach(function(b){ b.classList.add('swap'); });
+    setTimeout(function(){
+      badge.innerHTML = svg(c.badge)+'<span>'+c.label+'</span>';
+      badge.classList.remove('swap');
+      bubbles.forEach(function(b,i){ b.innerHTML = svg(c.bubbles[i % c.bubbles.length]); b.classList.remove('swap'); });
+    }, 260);
+  }
+
+  var i = 0, current = null;
+  function show(idx){
+    var r = roles[idx];
+    var card = build(r);
+    deck.appendChild(card);
+    paintCat(r.cat);
+    if(live) live.textContent = r.t + ' at ' + r.co + ', ' + r.loc;
+    // next frame: animate in + fill ring
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){
+      card.classList.remove('pre');
+      card.querySelector('.ring').classList.add('in');
+    });});
+    if(current){
+      var old = current;
+      old.classList.add('exit');
+      setTimeout(function(){ old.remove(); }, 900);
+    }
+    current = card;
+  }
+
+  show(0);
+
+  if(!reduce){
+    var timer=null;
+    function start(){ stop(); timer=setInterval(function(){ i=(i+1)%roles.length; show(i); }, 3600); }
+    function stop(){ if(timer) clearInterval(timer); timer=null; }
+    start();
+    document.addEventListener('visibilitychange', function(){ document.hidden ? stop() : start(); });
+  }
+})();
+</script>
+</body>
+</html>

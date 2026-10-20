@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Sign in or create your account — Work9ja</title>
+<meta name="description" content="Sign in to Work9ja or create a free account to find jobs, learn skills, build your profile and get hired across Nigeria." />
+<meta name="robots" content="noindex, follow" />
+<link rel="canonical" href="https://work9ja.sprtn.net/login.html" />
+<meta name="theme-color" content="#0E1211" />
+
+<link rel="icon" href="/favicon.ico" sizes="any" />
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="/apple-icon.png" />
+<link rel="manifest" href="/site.webmanifest" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&family=Fraunces:ital,opsz,wght@1,9..144,400&display=swap" />
+<link rel="stylesheet" href="/assets/app.css" />
+
+<style>
+.auth{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr}
+@media(max-width:900px){.auth{grid-template-columns:1fr}}
+
+/* left brand panel */
+.auth-brand{position:relative;overflow:hidden;background:var(--ink-2);border-right:1px solid var(--border);padding:clamp(32px,5vw,64px);display:flex;flex-direction:column;justify-content:space-between}
+@media(max-width:900px){.auth-brand{display:none}}
+.auth-brand .glow{position:absolute;z-index:0;width:70vw;height:70vw;max-width:680px;right:-20%;top:-20%;background:radial-gradient(circle,rgba(198,242,78,.16),transparent 62%);pointer-events:none}
+.auth-brand > *{position:relative;z-index:2}
+.auth-brand .lede{font-family:"Space Grotesk",sans-serif;font-weight:600;font-size:clamp(1.8rem,1.2rem + 2.4vw,3rem);letter-spacing:-0.03em;line-height:1.02;max-width:16ch;margin-top:auto}
+.auth-brand .lede em{font-family:"Fraunces",serif;font-style:italic;font-weight:400;color:var(--lime)}
+.auth-brand .verbs{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.auth-brand .verbs span{font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);color:var(--text-2);border:1px solid var(--border);border-radius:100px;padding:.5em 1em}
+.auth-brand .foot{color:var(--text-3);font-size:var(--step--1);margin-top:40px}
+
+/* right form panel */
+.auth-form{display:flex;align-items:center;justify-content:center;padding:clamp(28px,5vw,56px)}
+.auth-card{width:100%;max-width:420px}
+.auth-card .back{display:inline-flex;align-items:center;gap:8px;color:var(--text-3);font-size:var(--step--1);margin-bottom:34px;transition:color .3s}
+.auth-card .back:hover{color:var(--text-1)}
+.auth-card .back svg{width:16px;height:16px;stroke:currentColor;stroke-width:2;fill:none}
+.auth-card h1{font-size:var(--step-2);letter-spacing:-0.03em}
+.auth-card .sub{color:var(--text-2);margin-top:10px}
+
+.tabs{display:flex;gap:4px;background:var(--ink-3);border:1px solid var(--border);border-radius:100px;padding:4px;margin-top:28px}
+.tabs button{flex:1;font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);color:var(--text-2);background:none;border:0;padding:.7em 1em;border-radius:100px;cursor:pointer;transition:background .4s var(--quart-out),color .4s}
+.tabs button.on{background:var(--lime);color:var(--ink)}
+
+form{margin-top:24px}
+.field{margin-bottom:16px}
+.field label{display:block;font-family:"Space Grotesk",sans-serif;font-size:var(--step--1);color:var(--text-2);margin-bottom:8px}
+.field .inp{display:flex;align-items:center;gap:10px;background:var(--ink-3);border:1px solid var(--border-strong);border-radius:12px;padding:0 14px;transition:border-color .35s}
+.field .inp:focus-within{border-color:var(--lime)}
+.field .inp svg{width:18px;height:18px;stroke:var(--text-3);stroke-width:1.8;fill:none;flex:none}
+.field input{flex:1;background:none;border:0;color:var(--bone);font-family:inherit;font-size:var(--step-0);padding:13px 0;outline:none}
+.field input::placeholder{color:var(--text-3)}
+.field .toggle{background:none;border:0;color:var(--text-3);cursor:pointer;font-family:inherit;font-size:var(--step--2)}
+.row-between{display:flex;justify-content:space-between;align-items:center;margin:4px 0 22px}
+.row-between label{display:flex;align-items:center;gap:8px;color:var(--text-2);font-size:var(--step--1);cursor:pointer}
+.row-between input{appearance:none;width:16px;height:16px;border:1.5px solid var(--border-strong);border-radius:5px;position:relative;cursor:pointer}
+.row-between input:checked{background:var(--lime);border-color:var(--lime)}
+.row-between input:checked::after{content:"";position:absolute;left:4.5px;top:1px;width:4px;height:9px;border:solid var(--ink);border-width:0 2px 2px 0;transform:rotate(45deg)}
+.row-between a{color:var(--lime);font-size:var(--step--1)}
+.btn-full{width:100%;justify-content:center;padding:1em}
+.divider{display:flex;align-items:center;gap:14px;color:var(--text-3);font-size:var(--step--2);margin:22px 0}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:var(--border)}
+.social{width:100%;justify-content:center;gap:10px}
+.social svg{width:18px;height:18px}
+.only-signup{display:none}
+.mode-signup .only-signup{display:block}
+.mode-signup .only-signin{display:none}
+.switch-note{text-align:center;color:var(--text-2);font-size:var(--step--1);margin-top:24px}
+.switch-note button{background:none;border:0;color:var(--lime);font-family:inherit;font-size:inherit;cursor:pointer;padding:0}
+.fineprint{color:var(--text-3);font-size:var(--step--2);margin-top:20px;line-height:1.5}
+.fineprint a{color:var(--text-2)}
+</style>
+</head>
+
+<body class="grain" id="auth">
+<div class="auth">
+  <!-- brand panel -->
+  <aside class="auth-brand">
+    <span class="glow" aria-hidden="true"></span>
+    <a href="/" class="wordmark" style="font-size:1.5rem"><span>work</span><span class="nine">9ja</span></a>
+    <div>
+      <p class="lede">Your career <em>command centre</em> — one account for all of it.</p>
+      <div class="verbs"><span>Learn</span><span>Connect</span><span>Work</span><span>Grow</span></div>
+    </div>
+    <p class="foot">Jobs · Academy · Network · AI Coach · Talent · Services</p>
+  </aside>
+
+  <!-- form panel -->
+  <main class="auth-form">
+    <div class="auth-card">
+      <a href="/" class="back"><svg viewBox="0 0 24 24"><path d="M19 12H5M11 18l-6-6 6-6"/></svg> Back to home</a>
+
+      <h1 id="title">Welcome back</h1>
+      <p class="sub" id="subtitle">Sign in to pick up where you left off.</p>
+
+      <div class="tabs" role="tablist">
+        <button id="tabSignin" class="on" role="tab" aria-selected="true">Sign in</button>
+        <button id="tabSignup" role="tab" aria-selected="false">Create account</button>
+      </div>
+
+      <form onsubmit="return false" novalidate>
+        <div class="field only-signup">
+          <label for="name">Full name</label>
+          <div class="inp">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/></svg>
+            <input id="name" type="text" autocomplete="name" placeholder="Ada Okeke" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">Email address</label>
+          <div class="inp">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M4 7l8 6 8-6"/></svg>
+            <input id="email" type="email" autocomplete="email" placeholder="you@email.com" />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="password">Password</label>
+          <div class="inp">
+            <svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <input id="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+            <button type="button" class="toggle" id="pwToggle" aria-label="Show password">Show</button>
+          </div>
+        </div>
+
+        <div class="row-between only-signin">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+        <div class="only-signup" style="height:14px"></div>
+
+        <button type="submit" class="btn btn-primary btn-full" data-magnetic>
+          <span id="submitLabel">Sign in</span>
+          <svg class="arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+
+        <div class="divider">or continue with</div>
+        <button type="button" class="btn btn-ghost social">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#C6F24E" d="M21.6 12.2c0-.6-.1-1.2-.2-1.8H12v3.4h5.4a4.6 4.6 0 0 1-2 3v2.5h3.2c1.9-1.7 3-4.3 3-7.1z"/><path fill="currentColor" d="M12 22c2.7 0 5-.9 6.6-2.4l-3.2-2.5c-.9.6-2 .9-3.4.9-2.6 0-4.8-1.7-5.6-4.1H3.1v2.6A10 10 0 0 0 12 22z" opacity=".7"/><path fill="currentColor" d="M6.4 13.9a6 6 0 0 1 0-3.8V7.5H3.1a10 10 0 0 0 0 9z" opacity=".5"/><path fill="currentColor" d="M12 6.1c1.5 0 2.8.5 3.8 1.5l2.8-2.8A10 10 0 0 0 3.1 7.5l3.3 2.6C7.2 7.8 9.4 6.1 12 6.1z" opacity=".8"/></svg>
+          Continue with Google
+        </button>
+
+        <p class="switch-note only-signin">New to Work9ja? <button type="button" id="goSignup">Create a free account</button></p>
+        <p class="switch-note only-signup">Already have an account? <button type="button" id="goSignin">Sign in</button></p>
+
+        <p class="fineprint">By continuing you agree to Work9ja's <a href="#">Terms</a> and <a href="#">Privacy Policy</a>. Your data is handled under Nigerian data-protection rules.</p>
+      </form>
+    </div>
+  </main>
+</div>
+
+<script src="/assets/app.js" defer></script>
+<script>
+(function(){
+  var body=document.getElementById('auth');
+  var tSignin=document.getElementById('tabSignin'), tSignup=document.getElementById('tabSignup');
+  var title=document.getElementById('title'), sub=document.getElementById('subtitle'), label=document.getElementById('submitLabel');
+  function mode(signup){
+    body.classList.toggle('mode-signup', signup);
+    tSignup.classList.toggle('on', signup); tSignin.classList.toggle('on', !signup);
+    tSignup.setAttribute('aria-selected', signup); tSignin.setAttribute('aria-selected', !signup);
+    title.textContent = signup ? 'Create your account' : 'Welcome back';
+    sub.textContent = signup ? 'Free to start — find jobs, learn and get hired.' : 'Sign in to pick up where you left off.';
+    label.textContent = signup ? 'Create account' : 'Sign in';
+  }
+  tSignin.addEventListener('click', function(){ mode(false); });
+  tSignup.addEventListener('click', function(){ mode(true); });
+  document.getElementById('goSignup').addEventListener('click', function(){ mode(true); });
+  document.getElementById('goSignin').addEventListener('click', function(){ mode(false); });
+  if (location.hash === '#signup') mode(true);
+
+  var pw=document.getElementById('password'), tg=document.getElementById('pwToggle');
+  tg.addEventListener('click', function(){
+    var show = pw.type === 'password';
+    pw.type = show ? 'text' : 'password';
+    tg.textContent = show ? 'Hide' : 'Show';
+  });
+})();
+</script>
+</body>
+</html>
